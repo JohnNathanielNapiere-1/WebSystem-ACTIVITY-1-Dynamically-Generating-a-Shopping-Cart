@@ -1,0 +1,272 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset styles */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sticky header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  font-size: 1.5rem;
+  z-index: 1000;
+}
+
+/* Header title */
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Icons */
+.icon-container {
+  display: flex;
+  gap: 15px;
+}
+
+.icon-container i {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon-container i:hover {
+  transform: scale(1.2);
+}
+
+/* Initially hide home icon */
+.bx-home {
+  display: none;
+}
+
+/* Main container */
+.main-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Grid layout for items */
+.item-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 90vw;
+  height: 70vh;
+}
+
+/* Item styling */
+.item-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.item-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+/* Hover effects */
+.item-container:hover {
+  transform: scale(1.05);
+  background-color: #f0f0f0;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.item-container:active {
+  transform: scale(0.95);
+  background-color: #e0e0e0;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 10%; /* Moved lower to avoid header */
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Modal Image */
+.modal-img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Quantity input */
+#quantity {
+  width: 50px;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  background: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.add-to-cart:hover {
+  background: #218838;
+}
+
+/* Cart Styling */
+.cart-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 70vw;
+  margin: auto;
+}
+
+.cart-box > p {
+  text-align: center;
+}
+
+/* Cart Item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 10px;
+  width: 70vw;
+  flex-shrink: 0;
+  gap: 50px;
+}
+
+.cart-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cart-item .cart-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Total & Checkout Container */
+.total-checkout-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  border-top: 2px solid black;
+  margin-top: 15px;
+}
+
+/* Total Price */
+.cart-total {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Checkout Button */
+.checkout-btn {
+  background-color: #28a745;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.checkout-btn:hover {
+  background-color: #218838;
+}
+
+.checkout-btn:active {
+  transform: scale(0.95);
+}
+
+/* Remove Button */
+.remove-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: auto;
+}
+
+.remove-btn:hover {
+  background-color: #c82333;
+}
+
+.remove-btn:active {
+  transform: scale(0.95);
+}
